@@ -140,6 +140,7 @@ class Dashboard extends React.Component {
                         type="text"
                         value={this.state.searchValue}
                         className="searchInput"
+                        autoComplete="off"
                         onChange={(event) => this.handleChange(event)}
                         onKeyDown={(event) => this.onBackspacePress(event)}
                         autoFocus
