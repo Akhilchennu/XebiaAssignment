@@ -1,0 +1,126 @@
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+body, html, #root{
+  height: 100%;
+  overflow-y: auto;
+}
+.header{
+  font-size: 1rem;
+    line-height: 1.1em;
+    font-weight: 700;
+} 
+.loginButton{
+  width: 100%;
+}
+.marginTop24{
+  margin-top: 24px !important;
+}
+.marginTop48{
+margin-top: 48px !important;
+}
+.horizantalLine::after{
+  content:'';
+  display:inline-block;
+  width:50%; height:100%;
+  border-bottom:0.9px ridge lightgrey;
+  margin-bottom: 4px;
+}
+.horizantalLine::before{
+  content:'';
+  display:inline-block;
+  width:50%; height:100%;
+  border-bottom:0.9px ridge lightgrey;
+  margin-bottom: 4px;
+}
+.errorText{
+  color: #9F3A38;
+  border: 0.5px solid #9F3A38;
+  padding: 5px;
+  background-color: #FFF6F6;
+  margin-top: 16px;
+  font-size: 16px;
+}    
+
+  .toolbarStyle{
+    justify-content: flex-end;
+  }
+  .searchInputStyle{
+    text-align: center;
+  }
+  .searchInput{
+    width: 35%;
+  }
+  .container{
+    position: absolute;
+    width: 100%;
+    margin: 0 auto;
+    height:60%;
+    display: table
+}
+.noResults{
+  display: table-cell;
+    vertical-align: middle;
+    font-size: 24px;
+}
+.chipDiv{
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.chipStyle{
+margin: 10px;
+}
+.showInfo{
+  padding: 16px;
+  margin: 0 auto;
+  width: 30%;
+}
+.left{
+  float: left;
+}
+.right{
+  float: right;
+}
+.paperWidth{
+  width: 30%;
+}
+  @media only screen and (max-width: 320px) {
+    .errorText{
+      font-size: 0.9rem;
+      }
+    } 
+    .noResults{
+      font-size: 20px;
+    }
+  @media only screen and (max-width:475px){
+    .searchInput{
+      width: unset;
+    }
+    .showInfo{
+      width: 100%;
+    }
+    .paperWidth{
+      width: 100%;
+    }
+  }
+  @media only screen and (max-width:1024px) and (min-width:476px){
+    .showInfo{
+      width: 46%;
+    }
+  }
+/* .showInfo div span:first-child{
+  float: left;
+} */
+/* .showInfo div{
+  display: flex;
+} */
+.showInfo table tr td:first-child{
+  text-align: left;
+}
