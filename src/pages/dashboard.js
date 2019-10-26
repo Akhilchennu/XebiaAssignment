@@ -94,6 +94,9 @@ class Dashboard extends React.Component {
                         loading: false, planetInfo: {}
                     });
                 }
+                if(this.props.userName && this.props.userName !== 'Luke Skywalker'){
+                    this.searchCount++;
+                }
             })
                 .catch(() => {
                     console.log("error");
@@ -110,11 +113,6 @@ class Dashboard extends React.Component {
     }
     planetClick = (planet) => {
         this.setState({ planetInfo: planet });
-    }
-    onBackspacePress = (event) => {
-        if (event.keyCode === 8 && this.state.searchValue && this.props.userName && this.props.userName !== 'Luke Skywalker') {
-            this.searchCount++;
-        }
     }
     handleClose = (event, reason) => {
         if (reason === 'clickaway') {
@@ -142,7 +140,6 @@ class Dashboard extends React.Component {
                         className="searchInput"
                         autoComplete="off"
                         onChange={(event) => this.handleChange(event)}
-                        onKeyDown={(event) => this.onBackspacePress(event)}
                         autoFocus
                     />
                     <div className={this.state.searchResult.length > 0 ? "marginTop48" : "container marginTop48"}>
