@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import { Provider } from 'react-redux';
 import rootReducer from './reducer/rootReducer.js';
-import { createStore, applyMiddleware } from 'redux';
+import { createStore} from 'redux';
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage'
 import * as serviceWorker from './serviceWorker';

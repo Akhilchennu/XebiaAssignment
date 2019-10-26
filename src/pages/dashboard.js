@@ -1,7 +1,6 @@
 import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import { connect } from 'react-redux';
@@ -69,7 +68,7 @@ class Dashboard extends React.Component {
         if (value) {
             const dataValue = service.searchService(value, this.abortController.signal);
             dataValue.then((response) => {
-                const { results, count } = response;
+                const { results} = response;
                 if (results.length > 0) {
                     if (results.length > 1) {
                         let populationValues = new Promise((resolve, reject) => {
