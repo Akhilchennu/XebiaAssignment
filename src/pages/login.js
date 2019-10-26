@@ -81,7 +81,7 @@ class Login extends React.Component {
                 <div className="App-header">
                     <Paper className="paperWidth">
                         <div style={{ padding: '4%', paddingBottom: '10%', textAlign: 'center' }}>
-                            <div className="header">Login to search planets</div>
+                            <div className="header" test-header='header'>Login to search planets</div>
                             <div className="horizantalLine"></div>
                             <TextField
                                 id="userName"
@@ -125,7 +125,7 @@ class Login extends React.Component {
                             />
                             {this.state.disableButton ? <CircularProgress className="marginTop24" /> : <Button
                                 variant="contained" color="primary"
-                                className="loginButton marginTop24"
+                                className="loginButton marginTop24" test-button='button'
                                 onClick={(event) => this.loginClick(event)}>
                                 LogIn
                              </Button>}
