@@ -45,6 +45,9 @@ class Dashboard extends React.Component {
             this.searchCount = 0;
         }, 60000);
     }
+    componentWillUnmount() {
+        clearInterval(this.searchCount);
+      }
     calculatevalues = (results) => {
         let highValue = results[0].population, lowValue = results[0].population;
         results.forEach((value) => {
