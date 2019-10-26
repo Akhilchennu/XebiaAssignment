@@ -128,7 +128,7 @@ class Dashboard extends React.Component {
             <React.Fragment>
                 <AppBar position="static">
                     <Toolbar className="toolbarStyle">
-                        <Button color="inherit" onClick={() => { this.logOutClick() }}>Logout</Button>
+                        <Button color="inherit" test-button='logout' onClick={() => { this.logOutClick() }}>Logout</Button>
                     </Toolbar>
                 </AppBar>
                 <div className="marginTop24 searchInputStyle">
